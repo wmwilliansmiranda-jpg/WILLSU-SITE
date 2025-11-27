@@ -1,1001 +1,836 @@
+
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WillSu - Especialistas em Restauração e Envelopamento | 12 Anos de Experiência</title>
+    <title>WILLSU - Restauração e Envelopamento Premium</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* RESET E CONFIGURAÇÕES GERAIS */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         :root {
-            --primary: #1a365d;
-            --secondary: #d4af37;
-            --accent: #25D366;
-            --light: #f8f9fa;
-            --dark: #2d3748;
-            --text: #2d3748;
-            --shadow: 0 5px 20px rgba(0,0,0,0.1);
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --whatsapp: #25D366;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --success: #27ae60;
         }
 
         body {
-            color: var(--text);
-            line-height: 1.7;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
             overflow-x: hidden;
-            background: #ffffff;
         }
 
         .container {
-            width: 90%;
+            width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 15px;
         }
 
-        section {
-            padding: 100px 0;
-        }
-
-        h1, h2, h3 {
-            margin-bottom: 25px;
-            color: var(--primary);
-            font-weight: 700;
-        }
-
-        h1 {
-            font-size: 3.5rem;
-            line-height: 1.2;
-        }
-
-        h2 {
-            font-size: 2.8rem;
-            text-align: center;
-            margin-bottom: 60px;
-            position: relative;
-        }
-
-        h2:after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: var(--secondary);
-        }
-
-        h3 {
-            font-size: 1.6rem;
-        }
-
-        p {
-            margin-bottom: 20px;
-            font-size: 1.1rem;
-            color: #4a5568;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 16px 35px;
-            background: var(--secondary);
-            color: var(--primary);
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 700;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            box-shadow: var(--shadow);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .btn:hover {
-            background: #b8941f;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
-        }
-
-        .btn-whatsapp {
-            background: var(--accent);
-            color: white;
-        }
-
-        .btn-whatsapp:hover {
-            background: #128C7E;
-        }
-
-        /* BOTÃO WHATSAPP FLUTUANTE */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            z-index: 1000;
-        }
-
-        .whatsapp-btn {
-            display: flex;
-            align-items: center;
-            background: var(--accent);
-            color: white;
-            padding: 18px 25px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1rem;
-            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
-            transition: all 0.3s ease;
-            animation: pulse 2s infinite;
-        }
-
-        .whatsapp-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
-        }
-
-        .whatsapp-icon {
-            font-size: 26px;
-            margin-right: 12px;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-
-        /* HEADER */
+        /* HEADER MOBILE FIRST */
         header {
-            background: rgba(255, 255, 255, 0.95);
-            box-shadow: var(--shadow);
+            background: var(--primary);
+            color: white;
+            padding: 1rem 0;
             position: fixed;
-            width: 100%;
             top: 0;
+            left: 0;
+            right: 0;
             z-index: 1000;
-            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
-        .navbar {
+        .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 25px 0;
         }
 
         .logo {
-            font-size: 2.2rem;
-            font-weight: 800;
-            color: var(--primary);
-            letter-spacing: 1px;
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: white;
         }
 
         .logo span {
             color: var(--secondary);
         }
 
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 10px;
-        }
-
-        .nav-links li a {
-            color: var(--primary);
-            text-decoration: none;
-            padding: 12px 20px;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            border-radius: 6px;
-        }
-
-        .nav-links li a:hover {
-            color: var(--secondary);
-            background: rgba(212, 175, 55, 0.1);
-        }
-
-        .menu-toggle {
-            display: none;
-            font-size: 1.8rem;
+        .mobile-menu {
+            font-size: 1.5rem;
             cursor: pointer;
-            color: var(--primary);
+            color: white;
+        }
+
+        .nav-links {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: var(--primary);
+            flex-direction: column;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .nav-links.active {
+            display: flex;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 1rem;
+            display: block;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            transition: background 0.3s;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255,255,255,0.1);
         }
 
         /* HERO SECTION */
         .hero {
-            background: linear-gradient(135deg, rgba(26, 54, 93, 0.9) 0%, rgba(45, 55, 72, 0.9) 100%), url('https://i.ibb.co/MDw9S9gC.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: white;
+            padding: 6rem 0 3rem;
             text-align: center;
-            padding: 200px 0 120px;
-            margin-top: 0;
+            margin-top: 60px;
         }
 
         .hero h1 {
-            color: white;
-            font-size: 4rem;
-            margin-bottom: 25px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            line-height: 1.3;
         }
 
         .hero p {
-            color: #e2e8f0;
-            font-size: 1.3rem;
-            max-width: 700px;
-            margin: 0 auto 40px;
-            line-height: 1.8;
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
         }
 
-        /* BANNER DE PREÇO */
-        .price-banner {
-            background: linear-gradient(135deg, var(--primary), #2d3748);
-            color: white;
-            padding: 40px 0;
-            text-align: center;
-            margin: 0;
-        }
-
-        .price-banner h2 {
-            color: white;
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-        }
-
-        .price-banner h2:after {
-            background: var(--secondary);
-        }
-
-        .price-banner .price {
-            font-size: 4rem;
-            font-weight: 800;
-            margin: 20px 0;
-            color: var(--secondary);
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .price-banner .highlight {
-            background: var(--secondary);
-            color: var(--primary);
-            padding: 10px 25px;
-            border-radius: 8px;
-            font-weight: 700;
-            font-size: 1.2rem;
+        .btn {
             display: inline-block;
-            margin: 15px 0;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            background: var(--accent);
+            color: white;
+            padding: 14px 28px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: all 0.3s;
+            border: none;
         }
 
-        /* GALERIA DE TRABALHOS */
-        .gallery {
-            background: var(--light);
-            padding: 100px 0;
+        .btn-whatsapp {
+            background: var(--whatsapp);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 25px;
-            margin-top: 50px;
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
-        .gallery-item {
-            height: 300px;
-            background-size: cover;
-            background-position: center;
-            border-radius: 12px;
-            transition: all 0.4s ease;
-            box-shadow: var(--shadow);
-            position: relative;
-            overflow: hidden;
+        /* SECTIONS */
+        section {
+            padding: 3rem 0;
         }
 
-        .gallery-item:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
         }
 
-        .gallery-item:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.1) 100%);
-            border-radius: 12px;
-            transition: all 0.3s ease;
+        .section-title h2 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
         }
 
-        .gallery-item:hover:before {
-            background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.3) 100%);
+        .section-title p {
+            color: #666;
+            font-size: 1rem;
         }
 
-        /* SERVIÇOS */
-        .services {
-            background: white;
-            padding: 100px 0;
-        }
-
+        /* SERVICES */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 35px;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
         }
 
         .service-card {
             background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: all 0.4s ease;
-            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
         }
 
         .service-card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            transform: translateY(-5px);
         }
 
-        .service-img {
-            height: 220px;
-            background-size: cover;
-            background-position: center;
-            transition: transform 0.4s ease;
-        }
-
-        .service-card:hover .service-img {
-            transform: scale(1.05);
-        }
-
-        .service-content {
-            padding: 30px;
+        .service-icon {
+            background: var(--primary);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
         }
 
         .service-content h3 {
             color: var(--primary);
-            margin-bottom: 15px;
-            font-size: 1.5rem;
-        }
-
-        .service-content p {
-            color: #718096;
-            line-height: 1.7;
-        }
-
-        /* BENEFÍCIOS */
-        .benefits {
-            background: linear-gradient(135deg, var(--light) 0%, #ffffff 100%);
-            padding: 100px 0;
-        }
-
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .benefit-item {
-            background: white;
-            padding: 40px 30px;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: var(--shadow);
-            transition: all 0.3s ease;
-            border: 1px solid #e2e8f0;
-        }
-
-        .benefit-item:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-        }
-
-        .benefit-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            color: var(--secondary);
-        }
-
-        .benefit-item h3 {
-            color: var(--primary);
+            margin-bottom: 1rem;
             font-size: 1.3rem;
-            margin-bottom: 15px;
         }
 
-        .benefit-item p {
-            color: #718096;
-            font-size: 1rem;
+        .service-content ul {
+            list-style: none;
         }
 
-        /* SOBRE */
-        .about {
+        .service-content li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .service-content li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+        }
+
+        /* PRICING */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .price-card {
             background: white;
-            padding: 100px 0;
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border: 2px solid transparent;
+            transition: all 0.3s;
         }
 
+        .price-card:hover {
+            border-color: var(--secondary);
+        }
+
+        .price-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--accent);
+            margin: 1rem 0;
+        }
+
+        /* TESTIMONIALS */
+        .testimonials-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .testimonial-card:before {
+            content: '"';
+            font-size: 3rem;
+            color: var(--secondary);
+            position: absolute;
+            top: 10px;
+            left: 15px;
+            opacity: 0.3;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            color: var(--primary);
+            text-align: right;
+        }
+
+        /* COVERAGE */
+        .coverage-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .city-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            font-size: 0.9rem;
+        }
+
+        /* ABOUT */
         .about-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
+            grid-template-columns: 1fr;
+            gap: 2rem;
         }
 
-        .about-text {
-            padding-right: 40px;
-        }
-
-        .experience-badge {
-            background: var(--secondary);
+        .about-text h3 {
             color: var(--primary);
-            padding: 12px 25px;
-            border-radius: 8px;
-            display: inline-block;
-            margin-bottom: 25px;
-            font-weight: 700;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
         }
 
-        .about-img {
-            height: 500px;
-            background: url('https://i.ibb.co/NnWYhJsH.jpg');
-            background-size: cover;
-            background-position: center;
-            border-radius: 15px;
-            box-shadow: var(--shadow);
+        .about-text p {
+            margin-bottom: 1rem;
         }
 
-        /* CONTATO */
-        .contact {
-            background: var(--light);
-            padding: 100px 0;
-        }
-
-        .contact-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 20px;
-            padding: 25px;
-            background: white;
-            border-radius: 12px;
-            box-shadow: var(--shadow);
-            transition: all 0.3s ease;
-        }
-
-        .contact-item:hover {
-            transform: translateX(10px);
-        }
-
-        .contact-icon {
-            width: 60px;
-            height: 60px;
-            background: var(--primary);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        /* CTA */
+        .cta {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: white;
-            font-size: 1.5rem;
-            flex-shrink: 0;
+            text-align: center;
+            padding: 3rem 1rem;
         }
 
-        .contact-form {
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: var(--shadow);
+        .cta h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
         }
 
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 25px;
-        }
-
-        .form-group label {
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: var(--primary);
-        }
-
-        .form-control {
-            padding: 15px;
-            border: 2px solid #e2e8f0;
-            border-radius: 8px;
+        .cta p {
             font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .form-control:focus {
-            outline: none;
-            border-color: var(--secondary);
-            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
-        }
-
-        textarea.form-control {
-            min-height: 150px;
-            resize: vertical;
+            margin-bottom: 2rem;
+            opacity: 0.9;
         }
 
         /* FOOTER */
         footer {
-            background: var(--primary);
+            background: var(--dark);
             color: white;
-            padding: 70px 0 30px;
+            padding: 2rem 0 1rem;
         }
 
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 40px;
-            margin-bottom: 50px;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
         }
 
-        .footer-logo {
-            font-size: 2.2rem;
-            font-weight: 800;
-            margin-bottom: 20px;
-            color: white;
-        }
-
-        .footer-logo span {
+        .footer-column h3 {
             color: var(--secondary);
-        }
-
-        .footer-about p {
-            color: #cbd5e0;
-            line-height: 1.8;
-        }
-
-        .footer-links h3, .footer-contact h3 {
-            margin-bottom: 25px;
-            color: white;
-            font-size: 1.3rem;
-        }
-
-        .footer-links ul {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 12px;
-        }
-
-        .footer-links a {
-            color: #cbd5e0;
-            text-decoration: none;
-            transition: color 0.3s;
-            font-size: 1rem;
-        }
-
-        .footer-links a:hover {
-            color: var(--secondary);
-        }
-
-        .footer-contact p {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 15px;
-            color: #cbd5e0;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 25px;
-        }
-
-        .social-link {
-            width: 45px;
-            height: 45px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-decoration: none;
-            transition: all 0.3s ease;
+            margin-bottom: 1rem;
             font-size: 1.2rem;
         }
 
-        .social-link:hover {
-            background: var(--secondary);
-            transform: translateY(-3px);
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-column a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-column a:hover {
+            color: var(--secondary);
         }
 
         .copyright {
             text-align: center;
-            padding-top: 30px;
+            padding-top: 2rem;
             border-top: 1px solid rgba(255,255,255,0.1);
-            color: #a0aec0;
+            font-size: 0.9rem;
+            color: #aaa;
         }
 
-        /* RESPONSIVIDADE */
-        @media (max-width: 1200px) {
-            h1 { font-size: 3rem; }
-            h2 { font-size: 2.5rem; }
+        .privacy-link {
+            text-align: center;
+            margin-top: 1rem;
         }
 
-        @media (max-width: 992px) {
-            .about-content, .contact-container {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .about-text {
-                padding-right: 0;
-            }
-
-            .hero {
-                padding: 180px 0 100px;
-            }
+        .privacy-link a {
+            color: #aaa;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
         }
 
-        @media (max-width: 768px) {
-            .menu-toggle {
-                display: block;
+        .privacy-link a:hover {
+            color: var(--secondary);
+        }
+
+        /* WHATSAPP FLOAT */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background: var(--whatsapp);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            z-index: 1000;
+            text-decoration: none;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        /* DESKTOP STYLES */
+        @media (min-width: 768px) {
+            .container {
+                padding: 0 20px;
             }
 
-            .nav-links {
-                position: fixed;
-                top: 90px;
-                left: -100%;
-                width: 100%;
-                height: calc(100vh - 90px);
-                background: white;
-                flex-direction: column;
-                align-items: center;
-                justify-content: flex-start;
-                padding-top: 60px;
-                transition: left 0.3s;
-                gap: 0;
-            }
-
-            .nav-links.active {
-                left: 0;
-            }
-
-            .nav-links li {
-                margin-bottom: 25px;
-            }
-
-            .nav-links li a {
-                font-size: 1.2rem;
-                padding: 15px 30px;
-            }
-
-            h1 {
-                font-size: 2.5rem;
-            }
-
-            h2 {
-                font-size: 2.2rem;
-            }
-
-            .hero {
-                padding: 160px 0 80px;
-                background-attachment: scroll;
-            }
-
-            .price-banner h2 {
-                font-size: 2rem;
-            }
-
-            .price-banner .price {
-                font-size: 3rem;
-            }
-
-            .whatsapp-btn span {
+            .mobile-menu {
                 display: none;
             }
 
-            .whatsapp-btn {
-                padding: 18px;
+            .nav-links {
+                display: flex;
+                position: static;
+                flex-direction: row;
+                background: none;
+                box-shadow: none;
+                padding: 0;
             }
 
-            .whatsapp-icon {
-                margin-right: 0;
+            .nav-links a {
+                padding: 0.5rem 1rem;
+                border-bottom: none;
             }
 
-            .gallery-grid {
-                grid-template-columns: 1fr;
+            .hero {
+                padding: 8rem 0 4rem;
+                margin-top: 0;
             }
 
-            section {
-                padding: 80px 0;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                width: 95%;
-                padding: 0 15px;
-            }
-
-            h1 {
-                font-size: 2rem;
-            }
-
-            h2 {
-                font-size: 1.8rem;
+            .hero h1 {
+                font-size: 2.5rem;
             }
 
             .hero p {
-                font-size: 1.1rem;
+                font-size: 1.2rem;
             }
 
-            .btn {
-                padding: 14px 25px;
-                font-size: 1rem;
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .pricing-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .testimonials-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .coverage-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* LARGE DESKTOP */
+        @media (min-width: 1200px) {
+            .hero h1 {
+                font-size: 3rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- BOTÃO WHATSAPP FLUTUANTE -->
-    <div class="whatsapp-float">
-        <a href="https://wa.me/5511983357198?text=Olá! Gostaria de solicitar um orçamento para restauração/envelopamento." class="whatsapp-btn" target="_blank">
-            <div class="whatsapp-icon">💬</div>
-            <span>Fale Conosco</span>
-        </a>
-    </div>
-
-    <!-- HEADER -->
+    <!-- Header -->
     <header>
         <div class="container">
-            <nav class="navbar">
-                <div class="logo">Will<span>Su</span></div>
-                <div class="menu-toggle">☰</div>
-                <ul class="nav-links">
-                    <li><a href="#home">Início</a></li>
-                    <li><a href="#trabalhos">Nossos Trabalhos</a></li>
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#precos">Preços</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-            </nav>
+            <div class="header-content">
+                <div class="logo">WILL<span>SU</span></div>
+                <div class="mobile-menu">☰</div>
+                <nav class="nav-links">
+                    <a href="#servicos">Serviços</a>
+                    <a href="#precos">Preços</a>
+                    <a href="#depoimentos">Depoimentos</a>
+                    <a href="#cobertura">Área de Atuação</a>
+                    <a href="#sobre">Sobre</a>
+                    <a href="#contato">Contato</a>
+                </nav>
+            </div>
         </div>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="hero" id="home">
+    <!-- Hero Section -->
+    <section class="hero">
         <div class="container">
-            <h1>WillSu - Excelência em Restauração</h1>
-            <p>12 anos transformando eletrodomésticos e móveis com qualidade superior e acabamento impecável</p>
-            <a href="https://wa.me/5511983357198?text=Olá! Gostaria de solicitar um orçamento para restauração/envelopamento." class="btn btn-whatsapp" target="_blank">Solicitar Orçamento</a>
-        </div>
-    </section>
-
-    <!-- BANNER DE PREÇO -->
-    <section class="price-banner" id="precos">
-        <div class="container">
-            <h2>ENVELOPAMENTO COM GARANTIA WILLSU</h2>
-            <div class="price">R$ 480,00</div>
-            <div class="highlight">PAGAMENTO APÓS APROVAÇÃO</div>
-            <p>GELADEIRA DUPLEX A PARTIR DE R$ 480,00 EM ADESIVO PREMIUM</p>
-            <p>QUALIDADE PROFISSIONAL - RESULTADO GARANTIDO</p>
-        </div>
-    </section>
-
-    <!-- GALERIA DE TRABALHOS -->
-    <section class="gallery" id="trabalhos">
-        <div class="container">
-            <h2>Nossos Trabalhos</h2>
-            <p style="text-align: center; margin-bottom: 50px; font-size: 1.2rem; color: #718096;">
-                Confira alguns dos nossos projetos realizados com excelência e atenção aos detalhes
+            <h1>Transformamos seus eletrodomésticos com acabamento premium</h1>
+            <p>Deixe seus eletros como novos com técnica exclusiva e durabilidade garantida</p>
+            <a href="https://wa.me/5511983357198?text=Olá! Gostaria de solicitar um orçamento" class="btn btn-whatsapp">
+                <i class="fab fa-whatsapp"></i> Solicitar Orçamento
+            </a>
+            <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+                Entre em contato somente se houver real intenção de prosseguir
             </p>
-            
-            <div class="gallery-grid">
-                <div class="gallery-item" style="background-image: url('https://i.ibb.co/MDw9S9gC.jpg')"></div>
-                <div class="gallery-item" style="background-image: url('https://i.ibb.co/NnWYhJsH.jpg')"></div>
-                <div class="gallery-item" style="background-image: url('https://i.ibb.co/R57DCp0.jpg')"></div>
-                <div class="gallery-item" style="background-image: url('https://i.ibb.co/S49VrwJr.jpg')"></div>
-                <div class="gallery-item" style="background-image: url('https://i.ibb.co/5x9bYt0T.jpg')"></div>
-                <div class="gallery-item" style="background-image: url('https://i.ibb.co/Ngtd3vqG.jpg')"></div>
-                <div class="gallery-item" style="background-image: url('https://i.ibb.co/Tx0ptJ6L.jpg')"></div>
-                <div class="gallery-item" style="background-image: url('https://i.ibb.co/MkC1Yb1Q.jpg')"></div>
-                <div class="gallery-item" style="background-image: url('https://i.ibb.co/fdVQvhtD.jpg')"></div>
-            </div>
         </div>
     </section>
 
-    <!-- SERVIÇOS -->
-    <section class="services" id="servicos">
+    <!-- Serviços -->
+    <section id="servicos">
         <div class="container">
-            <h2>Serviços Especializados</h2>
+            <div class="section-title">
+                <h2>Nossos Serviços</h2>
+                <p>Soluções completas de restauração e envelopamento</p>
+            </div>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-img" style="background-image: url('https://i.ibb.co/tTXBgR7L.jpg');"></div>
+                    <div class="service-icon">✨</div>
                     <div class="service-content">
-                        <h3>Envelopamento de Geladeiras</h3>
-                        <p>Transformação completa com adesivos premium de alta durabilidade e resistência, disponível em diversas cores e texturas.</p>
+                        <h3>Envelopamento Premium</h3>
+                        <p>Cores modernas e alta durabilidade para:</p>
+                        <ul>
+                            <li>Geladeiras</li>
+                            <li>Fogões</li>
+                            <li>Micro-ondas</li>
+                            <li>Máquinas de lavar</li>
+                            <li>Móveis em geral</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="service-card">
-                    <div class="service-img" style="background-image: url('https://i.ibb.co/S2zq3BN.jpg');"></div>
+                    <div class="service-icon">🔧</div>
                     <div class="service-content">
-                        <h3>Restauração de Móveis</h3>
-                        <p>Recuperação profissional de móveis antigos ou danificados, devolvendo a beleza original com técnicas especializadas.</p>
+                        <h3>Restauração Completa</h3>
+                        <p>Recuperamos a aparência original:</p>
+                        <ul>
+                            <li>Remoção de ferrugem</li>
+                            <li>Restauração de superfícies</li>
+                            <li>Correção de amarelado</li>
+                            <li>Troca de componentes</li>
+                            <li>Técnica exclusiva</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="service-card">
-                    <div class="service-img" style="background-image: url('https://i.ibb.co/8g1P2xTK.jpg');"></div>
+                    <div class="service-icon">♻️</div>
                     <div class="service-content">
-                        <h3>Envelopamento de Fogões</h3>
-                        <p>Proteção e renovação com adesivos resistentes ao calor, fáceis de limpar e com acabamento profissional.</p>
+                        <h3>Sustentabilidade</h3>
+                        <p>Renove ao invés de trocar:</p>
+                        <ul>
+                            <li>Mais barato</li>
+                            <li>Mais moderno</li>
+                            <li>Mais ecológico</li>
+                            <li>Reduza descartes</li>
+                            <li>Economize recursos</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- BENEFÍCIOS -->
-    <section class="benefits">
+    <!-- Preços -->
+    <section id="precos" style="background-color: #f0f5ff;">
         <div class="container">
-            <h2>Vantagens WillSu</h2>
-            <div class="benefits-grid">
-                <div class="benefit-item">
-                    <div class="benefit-icon">🏠</div>
-                    <h3>ATENDIMENTO NO LOCAL</h3>
-                    <p>Realizamos o serviço na sua residência ou empresa, com toda comodidade</p>
+            <div class="section-title">
+                <h2>Nossos Preços</h2>
+                <p>Valores iniciais - orçamento personalizado</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="price-card">
+                    <h3>Geladeiras</h3>
+                    <div class="price">A partir de R$ 500,00</div>
+                    <p>Transformação completa</p>
                 </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">🔧</div>
-                    <h3>PREPARAÇÃO COMPLETA</h3>
-                    <p>Remoção de ferrugens, amassados e preparação minuciosa da superfície</p>
+                <div class="price-card">
+                    <h3>Fogões</h3>
+                    <div class="price">A partir de R$ 300,00</div>
+                    <p>Renovação estética</p>
                 </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">🎨</div>
-                    <h3>ACABAMENTO PERFEITO</h3>
-                    <p>Pintura de componentes, borrachas e acabamentos com atenção aos detalhes</p>
+                <div class="price-card">
+                    <h3>Micro-ondas</h3>
+                    <div class="price">A partir de R$ 180,00</div>
+                    <p>Envelopamento profissional</p>
                 </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">📍</div>
-                    <h3>ATENDEMOS GRANDE SP</h3>
-                    <p>Cobertura em todo município de São Paulo e região metropolitana</p>
+                <div class="price-card">
+                    <h3>Máquinas</h3>
+                    <div class="price">A partir de R$ 400,00</div>
+                    <p>Proteção e acabamento</p>
                 </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">⏰</div>
-                    <h3>AGENDAMENTO FLEXÍVEL</h3>
-                    <p>Trabalhamos com horários agendados para melhor atender sua rotina</p>
+            </div>
+            <p style="text-align: center; margin-top: 2rem; color: #666;">
+                * Valor final personalizado conforme aparelho
+            </p>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section id="depoimentos">
+        <div class="container">
+            <div class="section-title">
+                <h2>Depoimentos</h2>
+                <p>O que nossos clientes dizem</p>
+            </div>
+            <div class="testimonials-container">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        Minha geladeira ficou nova! Atendimento rápido e profissional.
+                    </div>
+                    <div class="testimonial-author">— Sandra</div>
                 </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">💯</div>
-                    <h3>SATISFAÇÃO GARANTIDA</h3>
-                    <p>Pagamento somente após sua total aprovação no resultado final</p>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        O preto fosco ficou lindo. Trabalho impecável!
+                    </div>
+                    <div class="testimonial-author">— Nair</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        Transformou minha geladeira antiga. Perfeito!
+                    </div>
+                    <div class="testimonial-author">— José</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SOBRE -->
-    <section class="about" id="sobre">
+    <!-- Vantagens -->
+    <section id="vantagens" style="background-color: #f9f9f9;">
         <div class="container">
+            <div class="section-title">
+                <h2>Por que escolher a WILLSU?</h2>
+                <p>Diferenciais que fazem a diferença</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-content">
+                        <h3>🔒 Técnica Exclusiva</h3>
+                        <p>Impede o retorno da cor antiga e garante durabilidade por anos.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-content">
+                        <h3>🧼 Acabamento Limpo</h3>
+                        <p>Serviço sem sujeira, cheiro ou bagunça no seu ambiente.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-content">
+                        <h3>🚚 Atendimento Local</h3>
+                        <p>Vamos até você em toda Grande São Paulo.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-content">
+                        <h3>⚡ Serviço Rápido</h3>
+                        <p>Concluímos em apenas 2 a 3 horas.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-content">
+                        <h3>💳 Pagamento Facilitado</h3>
+                        <p>PIX, cartão, débito e crédito.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-content">
+                        <h3>🏆 Profissionalismo</h3>
+                        <p>Referência em qualidade e acabamento.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cobertura -->
+    <section id="cobertura">
+        <div class="container">
+            <div class="section-title">
+                <h2>Área de Atuação</h2>
+                <p>Atendemos em São Paulo capital e toda região metropolitana</p>
+            </div>
+            <div class="coverage-grid">
+                <div class="city-card">São Paulo Capital</div>
+                <div class="city-card">Osasco</div>
+                <div class="city-card">Barueri</div>
+                <div class="city-card">Itapevi</div>
+                <div class="city-card">Cotia</div>
+                <div class="city-card">Carapicuíba</div>
+                <div class="city-card">Embu das Artes</div>
+                <div class="city-card">Jandira</div>
+                <div class="city-card">Taboão da Serra</div>
+                <div class="city-card">Santo André</div>
+                <div class="city-card">Diadema</div>
+                <div class="city-card">Guarulhos</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" style="background-color: #f0f5ff;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sobre a WILLSU</h2>
+            </div>
             <div class="about-content">
                 <div class="about-text">
-                    <div class="experience-badge">12 ANOS DE EXCELÊNCIA</div>
-                    <h2>WillSu - Tradição e Qualidade</h2>
-                    <p>Há mais de uma década, a WillSu se consolidou como referência em restauração e envelopamento na grande São Paulo, construindo uma trajetória baseada na excelência e satisfação dos clientes.</p>
-                    <p>Utilizamos materiais premium e técnicas avançadas, garantindo durabilidade e um acabamento que supera expectativas. Cada projeto é tratado com a máxima atenção aos detalhes.</p>
-                    <p><strong>COMPROMISSO WILLSU: TRANSFORMAMOS SEU EQUIPAMENTO COM QUALIDADE SUPERIOR!</strong></p>
-                    <a href="https://wa.me/5511983357198?text=Olá! Gostaria de solicitar um orçamento para restauração/envelopamento." class="btn btn-whatsapp" target="_blank">Falar com Especialista</a>
+                    <h3>Nossa Missão</h3>
+                    <p>A WILLSU nasceu com a missão de transformar eletrodomésticos e móveis usando técnicas modernas de envelopamento e restauração.</p>
+                    <p>Atendemos centenas de clientes por mês e somos referência na Grande São Paulo pelo capricho, profissionalismo e acabamento impecável.</p>
+                    <p>Aqui, seu eletrodoméstico não precisa ser trocado. Ele precisa da WILLSU.</p>
+                    <p>Bem-vindo à Willsu, onde transformamos seus eletrodomésticos antigos em peças modernas, elegantes e duráveis. Nosso objetivo é entregar qualidade, beleza e resistência em cada serviço.</p>
                 </div>
-                <div class="about-img"></div>
             </div>
         </div>
     </section>
 
-    <!-- CONTATO -->
-    <section class="contact" id="contato">
+    <!-- CTA -->
+    <section class="cta">
         <div class="container">
-            <h2>Entre em Contato</h2>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">📞</div>
-                        <div>
-                            <h3>WhatsApp</h3>
-                            <p>(11) 98335-7198</p>
-                            <small>Atendimento rápido e direto</small>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">📍</div>
-                        <div>
-                            <h3>Área de Atendimento</h3>
-                            <p>São Paulo e Região Metropolitana</p>
-                            <small>Cobertura ampla sem custos adicionais</small>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">⏰</div>
-                        <div>
-                            <h3>Horário de Atendimento</h3>
-                            <p>Segunda a Domingo</p>
-                            <small>Agendamento prévio conforme sua disponibilidade</small>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">💰</div>
-                        <div>
-                            <h3>Condições Especiais</h3>
-                            <p>Sem taxa de deslocamento</p>
-                            <p>Pagamento após aprovação</p>
-                            <small>Transparência e confiança em primeiro lugar</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <h3>Solicite um Orçamento</h3>
-                    <form id="orcamentoForm">
-                        <div class="form-group">
-                            <label for="nome">Nome Completo</label>
-                            <input type="text" id="nome" class="form-control" required placeholder="Seu nome completo">
-                        </div>
-                        <div class="form-group">
-                            <label for="telefone">Telefone/WhatsApp</label>
-                            <input type="tel" id="telefone" class="form-control" required placeholder="(11) 99999-9999">
-                        </div>
-                        <div class="form-group">
-                            <label for="servico">Serviço de Interesse</label>
-                            <select id="servico" class="form-control" required>
-                                <option value="">Selecione o serviço desejado</option>
-                                <option value="envelopamento-geladeira">Envelopamento de Geladeira</option>
-                                <option value="envelopamento-fogao">Envelopamento de Fogão</option>
-                                <option value="restauracao-moveis">Restauração de Móveis</option>
-                                <option value="outro">Outro serviço</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="mensagem">Detalhes do Serviço</label>
-                            <textarea id="mensagem" class="form-control" placeholder="Descreva o equipamento, modelo e suas necessidades específicas..." required></textarea>
-                        </div>
-                        <button type="submit" class="btn" style="width: 100%;">Solicitar Orçamento</button>
-                    </form>
-                </div>
-            </div>
+            <h2>Pronto para transformar?</h2>
+            <p>Solicite um orçamento sem compromisso</p>
+            <a href="https://wa.me/5511983357198?text=Olá! Gostaria de solicitar um orçamento" class="btn btn-whatsapp">
+                <i class="fab fa-whatsapp"></i> Falar no WhatsApp
+            </a>
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer>
+    <!-- Footer -->
+    <footer id="contato">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-about">
-                    <div class="footer-logo">Will<span>Su</span></div>
-                    <p>Especialistas em restauração e envelopamento com 12 anos de excelência. Transformamos seus equipamentos com qualidade superior e compromisso com a satisfação total.</p>
-                    <a href="https://wa.me/5511983357198?text=Olá! Gostaria de solicitar um orçamento para restauração/envelopamento." class="btn btn-whatsapp" target="_blank" style="margin-top: 20px; display: inline-block;">Chamar no WhatsApp</a>
-                </div>
-                <div class="footer-links">
-                    <h3>Navegação</h3>
+                <div class="footer-column">
+                    <h3>Contato</h3>
                     <ul>
-                        <li><a href="#home">Início</a></li>
-                        <li><a href="#trabalhos">Nossos Trabalhos</a></li>
-                        <li><a href="#servicos">Serviços</a></li>
+                        <li><i class="fab fa-whatsapp"></i> (11) 98335-7198</li>
+                        <li><i class="fas fa-envelope"></i> willsu.envelopamento@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> São Paulo e Região Metropolitana</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Serviços</h3>
+                    <ul>
+                        <li><a href="#servicos">Envelopamento</a></li>
+                        <li><a href="#servicos">Restauração</a></li>
+                        <li><a href="#servicos">Sustentabilidade</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Links</h3>
+                    <ul>
                         <li><a href="#precos">Preços</a></li>
-                        <li><a href="#sobre">
+                        <li><a href="#depoimentos">Depoimentos</a></li>
+                        <li><a href="#cobertura">Área de Atuação</a></li>
+                        <li><a href="#sobre">Sobre Nós</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 WILLSU - Todos os direitos reservados.
+            </div>
+            <div class="privacy-link">
+                <a href="https://wmwilliansmiranda-jpg.github.io/willsu-sp.github/" target="_blank">Política de Privacidade</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/5511983357198?text=Olá! Gostaria de solicitar um orçamento" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Menu Mobile
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Fechar menu ao clicar em um link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-links').classList.remove('active');
+            });
+        });
+
+        // Scroll suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
