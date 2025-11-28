@@ -541,8 +541,11 @@ index.html
         <div class="container">
             <h1>Transformamos seus eletrodomésticos com acabamento premium</h1>
             <p>Deixe seus eletros como novos com técnica exclusiva e durabilidade garantida</p>
-            <a href="https://wa.me/5511983357198?text=Olá! Gostaria de solicitar um orçamento" class="btn btn-whatsapp">
-                <i class="fab fa-whatsapp"></i> Solicitar Orçamento
+           <a href="https://wa.me/5511983357198?text=Olá! Gostaria de solicitar um orçamento"
+   class="btn btn-whatsapp"
+   onclick="gtag('event', 'conversion', {'send_to': 'AW-17709030845/9hkhCNCEnPsZEKz4nMY9'});">
+    <i class="fab fa-whatsapp"></i> Solicitar Orçamento
+</a>
             </a>
             <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
                 Entre em contato somente se houver real intenção de prosseguir
