@@ -539,31 +539,63 @@ index.html
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-   <h1>Transformamos eletrodomésticos e móveis com adesivo e acabamento premium</h1>
-<p>Deixe seus eletros como novos com técnica exclusiva e durabilidade garantida.</p>
+  <h1 style="
+    color: #2c3e50; 
+    font-size: 2.5rem; 
+    margin-bottom: 20px; 
+    line-height: 1.3;
+    font-weight: 700;
+    text-align: center;
+">
+    TRANSFORMAMOS SEUS ELETRODOMÉSTICOS E MÓVEIS COM ADESIVOS E ACABAMENTO PREMIUM
+</h1>
 
-<a href="https://wa.me/5511983357198" 
-   style="
-     display: inline-block;
-     background-color: #25D366;
-     color: white;
-     padding: 12px 20px;
-     border-radius: 8px;
-     font-size: 18px;
-     text-decoration: none;
-     font-weight: bold;
-     margin-top: 10px;
-   ">
-  Solicitar Orçamento
-</a>
-
-<p style="margin-top: 10px; color: #444;">
-  Entre em contato somente se houver real intenção de prosseguir com o orçamento.
+<p style="
+    color: #555; 
+    font-size: 1.3rem; 
+    margin-bottom: 30px; 
+    text-align: center;
+">
+    Deixe seus eletros como novos com técnica exclusiva e durabilidade garantida
 </p>
 
+<a href="https://wa.me/5511983357198?text=Olá! Gostaria de solicitar um orçamento para transformação de eletrodomésticos/móveis." 
+   style="
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+     background-color: #25D366;
+     color: white;
+     padding: 15px 35px;
+     border-radius: 50px;
+     text-decoration: none;
+     font-size: 1.2rem;
+     font-weight: bold;
+     margin: 20px 0;
+     transition: all 0.3s ease;
+     box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+     border: 2px solid #25D366;
+   "
+   target="_blank"
+   onmouseover="this.style.backgroundColor='#1DA851'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 15px rgba(37, 211, 102, 0.4)';"
+   onmouseout="this.style.backgroundColor='#25D366'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(37, 211, 102, 0.3)';"
+   onmousedown="this.style.transform='scale(0.98)';"
+   onmouseup="this.style.transform='translateY(-2px)';">
+  <i class="fab fa-whatsapp" style="margin-right: 10px; font-size: 1.4rem;"></i> Solicitar Orçamento
+</a>
 
-<p class="observacao">Entre em contato somente se houver real intenção de prosseguir com o orçamento.</p>
+<p style="
+    margin-top: 15px; 
+    color: #666; 
+    font-size: 0.95rem;
+    font-style: italic;
+    text-align: center;
+">
+    Entre em contato somente se houver real intenção de prosseguir com o orçamento.
+</p>
 
+<!-- Adicione este link para os ícones do FontAwesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
             
             <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
                 Entre em contato somente se houver real intenção de prosseguir
