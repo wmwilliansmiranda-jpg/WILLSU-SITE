@@ -1,4 +1,4 @@
-html
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -207,22 +207,23 @@ html
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 3.8rem; /* AUMENTADO de 3.5rem para 3.8rem */
             margin-bottom: 1.5rem;
             line-height: 1.2;
             font-weight: 800;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-            color: white; /* ALTERAÇÃO SOLICITADA - Letras brancas */
+            color: white;
         }
 
         .hero-subtitle {
-            font-size: 1.5rem;
+            font-size: 1.6rem; /* AUMENTADO de 1.5rem para 1.6rem */
             margin-bottom: 2.5rem;
             opacity: 0.9;
             font-weight: 300;
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
+            color: white; /* CORRIGIDO - Agora em branco */
         }
 
         .btn-whatsapp-hero {
@@ -247,6 +248,17 @@ html
         .btn-whatsapp-hero:hover {
             transform: translateY(-5px) scale(1.05);
             box-shadow: 0 15px 40px rgba(37, 211, 102, 0.4);
+        }
+
+        .btn-disclaimer {
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            opacity: 0.8;
+            color: rgba(255, 255, 255, 0.8);
+            font-style: italic;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         /* SECTIONS */
@@ -737,7 +749,11 @@ html
         /* RESPONSIVE */
         @media (max-width: 1024px) {
             .hero h1 {
-                font-size: 3rem;
+                font-size: 3.2rem; /* Ajustado proporcionalmente */
+            }
+            
+            .hero-subtitle {
+                font-size: 1.4rem; /* Ajustado proporcionalmente */
             }
             
             .section-title h2 {
@@ -778,11 +794,11 @@ html
             }
 
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2.8rem; /* Ajustado proporcionalmente */
             }
 
             .hero-subtitle {
-                font-size: 1.3rem;
+                font-size: 1.3rem; /* Ajustado proporcionalmente */
             }
 
             section {
@@ -818,11 +834,11 @@ html
 
         @media (max-width: 480px) {
             .hero h1 {
-                font-size: 2rem;
+                font-size: 2.2rem; /* Ajustado proporcionalmente */
             }
 
             .hero-subtitle {
-                font-size: 1.1rem;
+                font-size: 1.1rem; /* Ajustado proporcionalmente */
             }
 
             .section-title h2 {
@@ -883,7 +899,11 @@ html
                    aria-label="Solicitar orçamento via WhatsApp">
                     <i class="fab fa-whatsapp"></i> SOLICITAR ORÇAMENTO AGORA
                 </a>
-                <p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.8;">
+                <!-- FRASE ADICIONADA CONFORME SOLICITADO -->
+                <p class="btn-disclaimer">
+                    Somente clique se tiver a real intenção de realizar o serviço.
+                </p>
+                <p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.8; color: rgba(255, 255, 255, 0.8);">
                     Atendimento rápido • Orçamento gratuito • Garantia total
                 </p>
             </div>
@@ -1352,3 +1372,4 @@ html
     </script>
 </body>
 </html>
+✅ Alterações Realizadas:
