@@ -539,12 +539,16 @@ index.html
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Transformamos seus eletrodomésticos com acabamento premium</h1>
-            <p>Deixe seus eletros como novos com técnica exclusiva e durabilidade garantida</p>
-           <a href="https://wa.me/5511983357198?text=Olá! Gostaria de solicitar um orçamento"
-   class="btn btn-whatsapp"
-   onclick="gtag('event', 'conversion', {'send_to': 'AW-17709030845/9hkhCNCEnPsZEKz4nMY9'});">
-    <i class="fab fa-whatsapp"></i> Solicitar Orçamento
+           <h2>Transformamos seus móveis com acabamento premium</h2>
+<p>Deixe seus eletros como novos com técnica exclusiva e durabilidade garantida</p>
+
+<p>
+  <a href="https://wa.me/55119833357198" class="btn btn-orcamento" role="button" aria-label="Solicitar orçamento via WhatsApp">
+    Solicitar Orçamento
+  </a>
+</p>
+
+<p class="observacao">Entre em contato somente se houver real intenção de prosseguir com o orçamento.</p>
 
             
             <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
