@@ -591,14 +591,14 @@ index.html
     font-style: italic;
     text-align: center;
 ">
-    Entre em contato somente se houver real intenção de prosseguir com o orçamento.
+    
 </p>
 
 <!-- Adicione este link para os ícones do FontAwesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
             
             <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
-                Entre em contato somente se houver real intenção de prosseguir
+              
             </p>
         </div>
     </section>
