@@ -539,14 +539,28 @@ index.html
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-           <h2>Transformamos seus móveis com acabamento premium</h2>
-<p>Deixe seus eletros como novos com técnica exclusiva e durabilidade garantida</p>
+   <h1>Transformamos eletrodomésticos e móveis com adesivo e acabamento premium</h1>
+<p>Deixe seus eletros como novos com técnica exclusiva e durabilidade garantida.</p>
 
-<p>
-  <a href="https://wa.me/55119833357198" class="btn btn-orcamento" role="button" aria-label="Solicitar orçamento via WhatsApp">
-    Solicitar Orçamento
-  </a>
+<a href="https://wa.me/5511983357198" 
+   style="
+     display: inline-block;
+     background-color: #25D366;
+     color: white;
+     padding: 12px 20px;
+     border-radius: 8px;
+     font-size: 18px;
+     text-decoration: none;
+     font-weight: bold;
+     margin-top: 10px;
+   ">
+  Solicitar Orçamento
+</a>
+
+<p style="margin-top: 10px; color: #444;">
+  Entre em contato somente se houver real intenção de prosseguir com o orçamento.
 </p>
+
 
 <p class="observacao">Entre em contato somente se houver real intenção de prosseguir com o orçamento.</p>
 
