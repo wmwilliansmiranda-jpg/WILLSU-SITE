@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
+<head><link rel="icon" href="favicon.ico" type="image/x-icon">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17709030845"></script>
     <script>
